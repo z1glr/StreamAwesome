@@ -18,7 +18,7 @@ const currentHue = ref(currentIcon.presetSettings.hue)
 </script>
 
 <template>
-  <label for="hueSelector" class="block flex-grow text-sm font-medium text-gray-900 dark:text-white"
+  <label for="hueSelector" class="block flex-grow text-sm font-medium text-gray-900 text-white"
     >Hue:</label
   >
   <input

@@ -84,7 +84,7 @@ function updateStyle(style: FontAwesomeStyle) {
 
 <template>
   <div class="mt-5">
-    <label for="iconSize" class="mb-[0.5] block text-sm font-medium text-gray-900 dark:text-white"
+    <label for="iconSize" class="mb-[0.5] block text-sm font-medium text-gray-900 text-white"
       >Icon Size and Style:
     </label>
     <input
@@ -94,12 +94,11 @@ function updateStyle(style: FontAwesomeStyle) {
       @input="(event) => updateSize(event)"
       min="50"
       max="250"
-      class="mb-6 h-2 w-full cursor-pointer appearance-none rounded-lg bg-gray-200 focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500 dark:bg-gray-700"
+      class="mb-6 h-2 w-full cursor-pointer appearance-none rounded-lg bg-gray-200 bg-gray-700 focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
     />
   </div>
-
   <section>
-    <label class="block text-sm font-medium text-gray-900 dark:text-white">Font Family: </label>
+    <label class="block text-sm font-medium text-white">Font Family: </label>
     <div class="mt-1 flex rounded-md shadow-sm">
       <div class="flex-1" v-for="(family, index) in relevantFamilies" :key="family">
         <input
@@ -117,7 +116,7 @@ function updateStyle(style: FontAwesomeStyle) {
             'rounded-s-lg': index === 0,
             'rounded-e-lg': index === relevantFamilies.length - 1
           }"
-          class="block cursor-pointer select-none border border-gray-200 bg-white px-4 py-2 text-center text-2xl text-gray-900 hover:bg-gray-100 hover:text-gray-600 focus:z-10 peer-checked:border-blue-600 peer-checked:text-blue-600 dark:border-gray-700 dark:bg-gray-800 dark:text-white dark:hover:bg-gray-700 dark:hover:text-gray-300 dark:peer-checked:text-blue-500"
+          class="block cursor-pointer select-none border border-gray-200 border-gray-700 bg-gray-800 px-4 py-2 text-center text-2xl text-gray-900 text-white hover:bg-gray-100 hover:bg-gray-700 hover:text-gray-300 hover:text-gray-600 focus:z-10 peer-checked:border-blue-600 peer-checked:text-blue-500 peer-checked:text-blue-600"
         >
           <Icon
             :fontAwesomeIcon="createFontAwesomeIconDisplayFromFamily(family)"
@@ -128,9 +127,7 @@ function updateStyle(style: FontAwesomeStyle) {
     </div>
 
     <div v-if="!icon.fontAwesomeIcon.family.includes(DuotoneKeyword)">
-      <label class="mt-3 block text-sm font-medium text-gray-900 dark:text-white"
-        >Font Style:
-      </label>
+      <label class="mt-3 block text-sm font-medium text-gray-900 text-white">Font Style: </label>
       <div class="mt-1 flex rounded-md shadow-sm">
         <div class="flex-1" v-for="(style, index) in relevantStyles" :key="style">
           <input
@@ -148,7 +145,7 @@ function updateStyle(style: FontAwesomeStyle) {
               'rounded-s-lg': index === 0,
               'rounded-e-lg': index === relevantStyles.length - 1
             }"
-            class="block cursor-pointer select-none border border-gray-200 bg-white px-4 py-2 text-center text-2xl text-gray-900 hover:bg-gray-100 hover:text-gray-600 focus:z-10 peer-checked:border-blue-600 peer-checked:text-blue-600 dark:border-gray-700 dark:bg-gray-800 dark:text-white dark:hover:bg-gray-700 dark:hover:text-gray-300 dark:peer-checked:text-blue-500"
+            class="block cursor-pointer select-none border border-gray-200 border-gray-700 bg-gray-800 px-4 py-2 text-center text-2xl text-gray-900 text-white hover:bg-gray-100 hover:bg-gray-700 hover:text-gray-300 hover:text-gray-600 focus:z-10 peer-checked:border-blue-600 peer-checked:text-blue-500 peer-checked:text-blue-600"
           >
             <Icon
               :fontAwesomeIcon="createFontAwesomeIconDisplayFromStyle(style)"

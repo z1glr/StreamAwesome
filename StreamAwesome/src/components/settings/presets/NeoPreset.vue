@@ -31,7 +31,7 @@ const toggleSettings = () => {
 </script>
 
 <template>
-  <label for="hueSelector" class="block flex-grow text-sm font-medium text-gray-900 dark:text-white"
+  <label for="hueSelector" class="block flex-grow text-sm font-medium text-gray-900 text-white"
     >Hue Start:</label
   >
   <input
@@ -51,9 +51,9 @@ const toggleSettings = () => {
       v-model="(currentIcon as CustomIcon<'Neo'>).presetSettings.invertDirection"
     />
     <div
-      class="peer relative h-6 w-11 rounded-full bg-gray-200 after:absolute after:start-[2px] after:top-[2px] after:h-5 after:w-5 after:rounded-full after:border after:border-gray-300 after:bg-white after:transition-all after:content-[''] peer-checked:bg-blue-600 peer-checked:after:translate-x-full peer-checked:after:border-white peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 rtl:peer-checked:after:-translate-x-full dark:border-gray-600 dark:bg-gray-700 dark:peer-focus:ring-blue-800"
+      class="peer relative h-6 w-11 rounded-full border-gray-600 bg-gray-200 bg-gray-700 after:absolute after:start-[2px] after:top-[2px] after:h-5 after:w-5 after:rounded-full after:border after:border-gray-300 after:bg-white after:transition-all after:content-[''] peer-checked:bg-blue-600 peer-checked:after:translate-x-full peer-checked:after:border-white peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 peer-focus:ring-blue-800 rtl:peer-checked:after:-translate-x-full"
     ></div>
-    <span class="ms-3 text-sm font-medium text-gray-900 dark:text-white">Invert Direction</span>
+    <span class="ms-3 text-sm font-medium text-gray-900 text-white">Invert Direction</span>
   </label>
 
   <br />
@@ -65,9 +65,9 @@ const toggleSettings = () => {
       v-model="(currentIcon as CustomIcon<'Neo'>).presetSettings.symbolOnly"
     />
     <div
-      class="peer relative h-6 w-11 rounded-full bg-gray-200 after:absolute after:start-[2px] after:top-[2px] after:h-5 after:w-5 after:rounded-full after:border after:border-gray-300 after:bg-white after:transition-all after:content-[''] peer-checked:bg-blue-600 peer-checked:after:translate-x-full peer-checked:after:border-white peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 rtl:peer-checked:after:-translate-x-full dark:border-gray-600 dark:bg-gray-700 dark:peer-focus:ring-blue-800"
+      class="peer relative h-6 w-11 rounded-full border-gray-600 bg-gray-200 bg-gray-700 after:absolute after:start-[2px] after:top-[2px] after:h-5 after:w-5 after:rounded-full after:border after:border-gray-300 after:bg-white after:transition-all after:content-[''] peer-checked:bg-blue-600 peer-checked:after:translate-x-full peer-checked:after:border-white peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 peer-focus:ring-blue-800 rtl:peer-checked:after:-translate-x-full"
     ></div>
-    <span class="ms-3 text-sm font-medium text-gray-900 dark:text-white">Symbol Only</span>
+    <span class="ms-3 text-sm font-medium text-gray-900 text-white">Symbol Only</span>
   </label>
 
   <br />
@@ -82,7 +82,7 @@ const toggleSettings = () => {
   </button>
 
   <div v-if="settingsExpanded" class="mt-2 border-l-4 border-l-gray-700 pl-2">
-    <label for="hueShift" class="block text-sm font-medium text-gray-900 dark:text-white"
+    <label for="hueShift" class="block text-sm font-medium text-gray-900 text-white"
       >Hue Shift:</label
     >
     <input
@@ -90,11 +90,11 @@ const toggleSettings = () => {
       id="hueShift"
       min="0"
       max="180"
-      class="h-2 w-full cursor-pointer appearance-none rounded-lg bg-gray-200 focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500 dark:bg-gray-700"
+      class="h-2 w-full cursor-pointer appearance-none rounded-lg bg-gray-200 bg-gray-700 focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
       v-model.number="(currentIcon as CustomIcon<'Neo'>).presetSettings.hueShift"
     />
 
-    <label for="hueShift" class="block text-sm font-medium text-gray-900 dark:text-white"
+    <label for="hueShift" class="block text-sm font-medium text-gray-900 text-white"
       >Translation:</label
     >
     <input
@@ -103,13 +103,11 @@ const toggleSettings = () => {
       min="-0.5"
       max="0.5"
       step="0.01"
-      class="h-2 w-full cursor-pointer appearance-none rounded-lg bg-gray-200 focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500 dark:bg-gray-700"
+      class="h-2 w-full cursor-pointer appearance-none rounded-lg bg-gray-200 bg-gray-700 focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
       v-model.number="(currentIcon as CustomIcon<'Neo'>).presetSettings.translation"
     />
 
-    <label
-      for="saturationSelector"
-      class="mt-2 block text-sm font-medium text-gray-900 dark:text-white"
+    <label for="saturationSelector" class="mt-2 block text-sm font-medium text-gray-900 text-white"
       >Saturation:</label
     >
     <input
@@ -122,9 +120,7 @@ const toggleSettings = () => {
       v-model.number="(currentIcon as CustomIcon<'Neo'>).presetSettings.saturation"
     />
 
-    <label
-      for="lightnessSelector"
-      class="mt-2 block text-sm font-medium text-gray-900 dark:text-white"
+    <label for="lightnessSelector" class="mt-2 block text-sm font-medium text-gray-900 text-white"
       >Lightness:</label
     >
     <input
@@ -139,13 +135,13 @@ const toggleSettings = () => {
 
     <label
       for="colorSpaceSelector"
-      class="mb-2 mt-3 block text-sm font-medium text-gray-900 dark:text-white"
+      class="mb-2 mt-3 block text-sm font-medium text-gray-900 text-white"
       >Select Color Space:</label
     >
     <select
       id="presetselector"
       v-model="(currentIcon as CustomIcon<'Neo'>).presetSettings.colorSpace"
-      class="mb-6 block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500"
+      class="mb-6 block w-full rounded-lg border border-gray-300 border-gray-600 bg-gray-50 bg-gray-700 p-2.5 text-sm text-gray-900 text-white placeholder-gray-400 focus:border-blue-500 focus:border-blue-500 focus:ring-blue-500 focus:ring-blue-500"
     >
       <option v-for="colorSpace in ColorSpaceKeys" :value="colorSpace" :key="colorSpace">
         {{ colorSpace.toUpperCase() }}

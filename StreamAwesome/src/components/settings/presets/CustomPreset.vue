@@ -23,7 +23,7 @@ currentIcon.fontAwesomeIcon.family = 'duotone'
       class="cursor-pointer"
       v-model="(currentIcon as CustomIcon<'Custom'>).presetSettings.foregroundColor"
     />
-    <span class="ms-3 text-sm font-medium text-gray-900 dark:text-white">Icon Color</span>
+    <span class="ms-3 text-sm font-medium text-gray-900 text-white">Icon Color</span>
   </label>
   <br />
   <label class="mt-2 inline-flex cursor-pointer items-center">
@@ -32,7 +32,7 @@ currentIcon.fontAwesomeIcon.family = 'duotone'
       class="cursor-pointer"
       v-model="(currentIcon as CustomIcon<'Custom'>).presetSettings.backgroundColor"
     />
-    <span class="ms-3 text-sm font-medium text-gray-900 dark:text-white">Background Color</span>
+    <span class="ms-3 text-sm font-medium text-gray-900 text-white">Background Color</span>
   </label>
 </template>
 
